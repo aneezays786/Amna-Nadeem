@@ -26,7 +26,8 @@
 ✨ University Assignments
 
 ## 📫 Connect with Me
-GitHub: https://github.com/YOUR_USERNAME
+GitHub:
+ GitHub: https://github.com/aneezays786
 
 ---
 ⭐ *"Learning something new every day."*
