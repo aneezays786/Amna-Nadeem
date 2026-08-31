@@ -1,33 +1,15 @@
-# Hi, I'm Amna Nadeem 👋
+# Aneezay's Website
 
-💻 BSIT Student
-🌱 Currently learning Python, C++, Git & Web Development
-🚀 Passionate about Technology and Software Development
-📚 Always learning and building new projects
+Elegant women's Pakistani fashion website for GitHub Pages.
 
- ## 🛠️ Skills
-- Python
-- C++
-- HTML
-- CSS
-- Git & GitHub
-- SQL (Basic)
+## Files
+- `index.html` — website structure
+- `style.css` — styling and responsive design
+- `script.js` — mobile navigation
+- `images/` — optional local images folder
 
-## 📌 Current Goals
-- Build real-world projects
-- Improve problem-solving skills
-- Learn Full Stack Development
-- Contribute to Open Source
+## GitHub Pages
+Upload all files to a **Public** GitHub repository. Keep `index.html` in the root.
+Then go to **Settings → Pages → Deploy from a branch → main → /(root) → Save**.
 
-## 📂 Featured Projects
-✨ Python Projects
-✨ C++ Programs
-✨ Web Development Projects
-✨ University Assignments
-
-## 📫 Connect with Me
-GitHub:
- GitHub: https://github.com/aneezays786
-
----
-⭐ *"Learning something new every day."*
+The template currently uses remote Unsplash image URLs for the visual placeholders. Replace those URLs with your own product photos when ready.
