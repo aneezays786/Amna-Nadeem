@@ -8,7 +8,16 @@ a{text-decoration:none;color:inherit}
 .nav nav{display:flex;gap:34px;font-size:.75rem;letter-spacing:2px;text-transform:uppercase}
 .nav nav a:hover,.socials a:hover{text-decoration:underline;text-underline-offset:6px}
 .menu{display:none;border:0;background:none;font-size:1.4rem}
-.hero{min-height:calc(100vh - 82px);display:flex;align-items:center;padding:9% 8%;background:linear-gradient(90deg,rgba(32,26,22,.72),rgba(32,26,22,.20)),url("https://images.unsplash.com/photo-1583391733956-6c78276477e8?auto=format&fit=crop&w=1800&q=85") center/cover}
+.hero{
+    min-height:calc(100vh - 82px);
+    display:flex;
+    align-items:center;
+    padding:9% 8%;
+    background:
+        radial-gradient(circle at 20% 30%,rgba(255,248,235,.95),transparent 35%),
+        radial-gradient(circle at 85% 20%,rgba(222,197,169,.55),transparent 32%),
+        linear-gradient(135deg,#f9f3eb,#e8d9ca,#f6eee5);
+}
 .hero-content{max-width:620px;color:white}
 .eyebrow{font-size:.68rem;letter-spacing:3px;font-weight:600}
 .hero h1{font-family:"Cormorant Garamond",serif;font-size:clamp(4rem,8vw,7rem);line-height:.88;margin:20px 0}
