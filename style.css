@@ -62,3 +62,22 @@ footer{background:#1c1917;color:#cfc5bc;display:flex;justify-content:space-betwe
  .cards{grid-template-columns:1fr}.card{height:500px}.featured{grid-template-columns:1fr}.featured-image{min-height:480px}.featured-copy{padding:80px 10%}
  footer{flex-direction:column;gap:8px;text-align:center}
 }
+.lawn-section,
+.new-arrivals-section{
+    padding:100px 7%;
+    text-align:center;
+    background:var(--cream);
+}
+
+.lawn-section h2,
+.new-arrivals-section h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.lawn-section p,
+.new-arrivals-section p{
+    font-size:.9rem;
+    font-weight:300;
+}
