@@ -81,3 +81,88 @@ footer{background:#1c1917;color:#cfc5bc;display:flex;justify-content:space-betwe
     font-size:.9rem;
     font-weight:300;
 }
+/* NEW COLLECTION SECTIONS */
+
+.fashion-section{
+    padding:120px 7%;
+    background:var(--cream);
+}
+
+.fashion-heading{
+    max-width:700px;
+    margin:0 auto 55px;
+    text-align:center;
+}
+
+.fashion-heading h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(3rem,5vw,4.6rem);
+    line-height:1;
+    margin:18px 0 25px;
+}
+
+.fashion-heading > p:last-child{
+    font-size:.9rem;
+    font-weight:300;
+}
+
+.fashion-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.fashion-card{
+    background:#fffdf9;
+    text-align:center;
+    padding-bottom:28px;
+    transition:transform .35s ease;
+}
+
+.fashion-card:hover{
+    transform:translateY(-7px);
+}
+
+.fashion-card img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    display:block;
+}
+
+.fashion-card h3{
+    font-family:"Cormorant Garamond",serif;
+    font-size:2rem;
+    margin:22px 0 5px;
+}
+
+.fashion-card p{
+    font-size:.7rem;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:#806b58;
+}
+
+.bridal-section{
+    background:#e9ded4;
+}
+
+.new-arrivals-section{
+    background:#f8f2eb;
+}
+
+@media(max-width:800px){
+
+    .fashion-section{
+        padding:80px 7%;
+    }
+
+    .fashion-grid{
+        grid-template-columns:1fr;
+    }
+
+    .fashion-card img{
+        height:520px;
+    }
+
+}
