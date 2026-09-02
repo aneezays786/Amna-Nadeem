@@ -16,7 +16,8 @@ a{text-decoration:none;color:inherit}
  background:
     radial-gradient(circle at 20% 30%,rgba(90,70,55,.65),transparent 35%),
     radial-gradient(circle at 85% 20%,rgba(55,42,34,.75),transparent 35%),
-    linear-gradient(135deg,#3b3029,#5a493d,#302721); 
+   linear-gradient(135deg,#3b3029,#5a493d,#302721);
+}
 .hero-content{max-width:620px;color:white}
 .eyebrow{font-size:.68rem;letter-spacing:3px;font-weight:600}
 .hero h1{font-family:"Cormorant Garamond",serif;font-size:clamp(4rem,8vw,7rem);line-height:.88;margin:20px 0}
