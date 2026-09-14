@@ -4,425 +4,815 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Aneezay's — elegant women's Pakistani fashion, from traditional and festive to effortless everyday wear.">
-
   <title>Aneezay's | Women's Pakistani Fashion</title>
+
+  <meta name="description"
+        content="Shop elegant Pakistani fashion from Aneezay's. Fancy, traditional and casual collections delivered to your doorstep.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f8f1e8;
+      color: #27221f;
+    }
+
+    /* NAVBAR */
+
+    .nav {
+      height: 78px;
+      background: rgba(255,253,249,0.96);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 6%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #27221f;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #27221f;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #a88976;
+    }
+
+    .bag-btn {
+      border: none;
+      background: #27221f;
+      color: white;
+      padding: 10px 17px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 50px 20px;
+
+      background:
+        linear-gradient(rgba(39,34,31,0.25), rgba(39,34,31,0.25)),
+        url("IMG-20260903-WA0004.jpg");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      background: rgba(255,255,255,0.78);
+      padding: 45px 35px;
+      max-width: 650px;
+      backdrop-filter: blur(5px);
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 65px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+    }
+
+    .shop-btn {
+      display: inline-block;
+      background: #27221f;
+      color: white;
+      text-decoration: none;
+      padding: 13px 28px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    /* SECTION */
+
+    .section {
+      padding: 70px 6%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 45px;
+    }
+
+    .section-title p {
+      font-size: 13px;
+      color: #777;
+      margin-top: 5px;
+    }
+
+    /* PRODUCTS */
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .product {
+      background: #fffdf9;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    }
+
+    .product img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-info {
+      padding: 18px;
+    }
+
+    .category {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #9c8271;
+    }
+
+    .product h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      margin: 5px 0;
+    }
+
+    .price {
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .add-btn {
+      width: 100%;
+      padding: 11px;
+      border: 1px solid #27221f;
+      background: transparent;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .add-btn:hover {
+      background: #27221f;
+      color: white;
+    }
+
+    /* CART */
+
+    .cart-panel {
+      position: fixed;
+      top: 0;
+      right: -430px;
+      width: 400px;
+      max-width: 90%;
+      height: 100vh;
+      background: #fffdf9;
+      z-index: 2000;
+      padding: 25px;
+      box-shadow: -5px 0 30px rgba(0,0,0,0.15);
+      transition: 0.3s;
+      overflow-y: auto;
+    }
+
+    .cart-panel.active {
+      right: 0;
+    }
+
+    .cart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .cart-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+    }
+
+    .close-cart {
+      border: none;
+      background: none;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 12px;
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+    }
+
+    .cart-item img {
+      width: 75px;
+      height: 90px;
+      object-fit: cover;
+    }
+
+    .cart-item-info {
+      flex: 1;
+    }
+
+    .cart-item-info h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+    }
+
+    .remove-btn {
+      border: none;
+      background: none;
+      color: #a55;
+      cursor: pointer;
+      font-size: 12px;
+      margin-top: 7px;
+    }
+
+    .cart-total {
+      margin-top: 25px;
+      font-size: 18px;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .checkout-btn {
+      width: 100%;
+      margin-top: 20px;
+      padding: 15px;
+      border: none;
+      background: #27221f;
+      color: white;
+      cursor: pointer;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    /* CHECKOUT */
+
+    .checkout-box {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 3000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .checkout-box.active {
+      display: flex;
+    }
+
+    .checkout-form {
+      background: #fffdf9;
+      width: 500px;
+      max-width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 30px;
+    }
+
+    .checkout-form h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 35px;
+      margin-bottom: 5px;
+    }
+
+    .checkout-form p {
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d8d0c8;
+      background: white;
+      font-family: 'Montserrat', sans-serif;
+      outline: none;
+    }
+
+    .form-group textarea {
+      height: 85px;
+      resize: vertical;
+    }
+
+    .form-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .cancel-btn,
+    .whatsapp-btn {
+      flex: 1;
+      padding: 14px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .cancel-btn {
+      background: #ddd;
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+      font-weight: 600;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+      background: #27221f;
+      color: white;
+      padding: 65px 20px;
+    }
+
+    .contact h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+    }
+
+    .contact p {
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    .contact a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1d1917;
+      color: #ccc;
+      font-size: 11px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width: 900px) {
+
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+      }
+    }
+
+    @media(max-width: 550px) {
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .product img {
+        height: 430px;
+      }
+
+      .hero {
+        min-height: 65vh;
+      }
+
+      .hero h1 {
+        font-size: 45px;
+      }
+
+      .section {
+        padding: 50px 5%;
+      }
+    }
+
+  </style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <header class="nav">
+  <!-- NAVIGATION -->
 
-    <a class="logo" href="#home">Aneezay's</a>
+  <nav class="nav">
 
-    <button class="menu" aria-label="Open menu">☰</button>
+    <div class="logo">
+      Aneezay's
+    </div>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#collections">Collections</a>
-      <a href="#about">About</a>
-      <a href="#lawn">Lawn</a>
-      <a href="#bridal">Bridal</a>
-      <a href="#new-arrivals">New Arrivals</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#lawn">Lawn</a></li>
+      <li><a href="#new-arrivals">New Arrivals</a></li>
+      <li><a href="#fancy">Fancy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
 
-  </header>
+    <button class="bag-btn" onclick="openCart()">
+      🛍️ Bag (<span id="cart-count">0</span>)
+    </button>
 
-
-  <main>
-
-    <!-- HERO -->
-    <section class="hero" id="home">
-
-      <div class="hero-content">
-
-        <p class="eyebrow">PAKISTANI WOMEN'S WEAR</p>
-
-        <h1>
-          Elegance,<br>
-          <em>stitched beautifully.</em>
-        </h1>
-
-        <p class="hero-text">
-          Timeless silhouettes, traditional details and effortless
-          everyday pieces — curated for every version of you.
-        </p>
-
-        <a class="button" href="#collections">
-          Explore Collection
-        </a>
-
-      </div>
-
-    </section>
+  </nav>
 
 
-    <!-- INTRO -->
-    <section class="intro">
+  <!-- HERO -->
 
-      <p class="eyebrow">THE ANEEZAY'S EDIT</p>
+  <section class="hero" id="home">
 
-      <h2>
-        Made for moments<br>
-        you'll remember.
-      </h2>
+    <div class="hero-content">
+
+      <h1>Aneezay's</h1>
 
       <p>
-        From graceful festive looks to easy casuals, Aneezay's brings
-        Pakistani craftsmanship into a modern, feminine wardrobe.
+        ELEGANCE • TRADITION • STYLE
       </p>
 
-    </section>
-
-
-    <!-- COLLECTIONS -->
-    <section class="collections" id="collections">
-
-      <div class="section-heading">
-
-        <div>
-          <p class="eyebrow">SHOP BY MOOD</p>
-          <h2>Our Collections</h2>
-        </div>
-
-        <span>01 — 03</span>
-
-      </div>
-
-
-      <div class="cards">
-
-        <article class="card fancy">
-
-          <div class="card-overlay"></div>
-
-          <div class="card-content">
-            <p>01 / FESTIVE</p>
-            <h3>Fancy Edit</h3>
-            <a href="#contact">Discover →</a>
-          </div>
-
-        </article>
-
-
-        <article class="card traditional">
-
-          <div class="card-overlay"></div>
-
-          <div class="card-content">
-            <p>02 / HERITAGE</p>
-            <h3>Traditional</h3>
-            <a href="#contact">Discover →</a>
-          </div>
-
-        </article>
-
-
-        <article class="card casual">
-
-          <div class="card-overlay"></div>
-
-          <div class="card-content">
-            <p>03 / EVERYDAY</p>
-            <h3>Casual Chic</h3>
-            <a href="#contact">Discover →</a>
-          </div>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- LAWN COLLECTION -->
-    <section class="fashion-section" id="lawn">
-
-      <div class="fashion-heading">
-
-        <p class="eyebrow">SUMMER EDIT</p>
-
-        <h2>Lawn Collection</h2>
-
-        <p>
-          Light, elegant and effortlessly beautiful pieces made
-          for warm days and everyday Pakistani style.
-        </p>
-
-      </div>
-
-
-      <div class="fashion-grid">
-
-        <div class="fashion-card">
-
-          <img
-            src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=85"
-            alt="Elegant Lawn outfit">
-
-          <h3>Soft Florals</h3>
-
-          <p>Elegant everyday wear</p>
-
-        </div>
-
-
-        <div class="fashion-card">
-
-          <img
-            src="https://images.unsplash.com/photo-1605763240000-7e93b172d754?auto=format&fit=crop&w=900&q=85"
-            alt="Pakistani traditional outfit">
-
-          <h3>Classic Lawn</h3>
-
-          <p>Timeless Pakistani style</p>
-
-        </div>
-
-
-        <div class="fashion-card">
-
-          <img
-            src="https://images.unsplash.com/photo-1585488435497-3f9c6f0d0a0d?auto=format&fit=crop&w=900&q=85"
-            alt="Elegant casual outfit">
-
-          <h3>Everyday Grace</h3>
-
-          <p>Comfort with elegance</p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- BRIDAL COLLECTION -->
-    <section class="fashion-section bridal-section" id="bridal">
-
-      <div class="fashion-heading">
-
-        <p class="eyebrow">THE BRIDAL EDIT</p>
-
-        <h2>Bridal Collection</h2>
-
-        <p>
-          Graceful silhouettes, delicate details and timeless
-          elegance for your most memorable celebrations.
-        </p>
-
-      </div>
-
-
-      <div class="fashion-grid">
-
-        <div class="fashion-card">
-
-          <img
-            src="https://images.unsplash.com/photo-1594552072238-b8a33785b261?auto=format&fit=crop&w=900&q=85"
-            alt="Elegant bridal fashion">
-
-          <h3>Bridal Grace</h3>
-
-          <p>Made for special moments</p>
-
-        </div>
-
-
-        <div class="fashion-card">
-
-          <img
-            src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85"
-            alt="Luxury festive fashion">
-
-          <h3>Festive Elegance</h3>
-
-          <p>Timeless celebration wear</p>
-
-        </div>
-
-
-        <div class="fashion-card">
-
-          <img
-            src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=85"
-            alt="Elegant formal outfit">
-
-          <h3>Signature Bridal</h3>
-
-          <p>Classic with a modern touch</p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- NEW ARRIVALS -->
-    <section class="fashion-section new-arrivals-section" id="new-arrivals">
-
-      <div class="fashion-heading">
-
-        <p class="eyebrow">JUST IN</p>
-
-        <h2>New Arrivals</h2>
-
-        <p>
-          Discover the newest pieces from Aneezay's,
-          thoughtfully designed for your wardrobe.
-        </p>
-
-      </div>
-
-
-      <div class="fashion-grid">
-
-        <div class="fashion-card">
-
-          <img
-            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85"
-            alt="New fashion arrival">
-
-          <h3>New Season</h3>
-
-          <p>Fresh styles, timeless feel</p>
-
-        </div>
-
-
-        <div class="fashion-card">
-
-          <img
-            src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=85"
-            alt="New elegant fashion">
-
-          <h3>Modern Muse</h3>
-
-          <p>Effortless everyday elegance</p>
-
-        </div>
-
-
-        <div class="fashion-card">
-
-          <img
-            src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=85"
-            alt="New clothing collection">
-
-          <h3>Latest Edit</h3>
-
-          <p>Designed for every moment</p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- FEATURED -->
-    <section class="featured">
-
-      <div class="featured-image"></div>
-
-      <div class="featured-copy">
-
-        <p class="eyebrow">SIGNATURE STYLE</p>
-
-        <h2>
-          Tradition with<br>
-          <em>a softer touch.</em>
-        </h2>
-
-        <p>
-          Delicate embroidery, graceful cuts and rich Pakistani
-          textures — designed to feel special without ever feeling too much.
-        </p>
-
-        <a class="text-link" href="#contact">
-          Enquire about pieces →
-        </a>
-
-      </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-    <section class="about" id="about">
-
-      <p class="eyebrow">OUR STORY</p>
-
-      <h2>
-        A little tradition.<br>
-        A lot of <em>you.</em>
-      </h2>
-
-      <p>
-        Aneezay's celebrates the beauty of Pakistani women's fashion
-        through pieces that balance heritage and contemporary elegance.
-        Whether you're dressing for Eid, a celebration, university,
-        or an ordinary day, there's a look waiting for you.
-      </p>
-
-    </section>
-
-
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-
-      <p class="eyebrow">STAY IN TOUCH</p>
-
-      <h2>
-        Let's find your<br>
-        <em>perfect look.</em>
-      </h2>
-
-      <p>
-        For orders, prices, sizes and new arrivals,
-        get in touch with Aneezay's.
-      </p>
-
-      <a class="button light" href="mailto:aneezaybrand@gmail.com">
-        Contact Us
+      <a href="#new-arrivals" class="shop-btn">
+        SHOP COLLECTION
       </a>
 
+    </div>
 
-      <div class="socials">
+  </section>
 
-        <a href="#" aria-label="Instagram">Instagram</a>
 
-        <a href="#" aria-label="TikTok">TikTok</a>
+  <!-- NEW ARRIVALS -->
+
+  <section class="section" id="new-arrivals">
+
+    <div class="section-title">
+
+      <h2>New Arrivals</h2>
+
+      <p>
+        Discover our latest collection
+      </p>
+
+    </div>
+
+    <div class="products" id="product-container"></div>
+
+  </section>
+
+
+  <!-- LAWN -->
+
+  <section class="section" id="lawn">
+
+    <div class="section-title">
+
+      <h2>Lawn Collection</h2>
+
+      <p>
+        Light • Elegant • Everyday
+      </p>
+
+    </div>
+
+    <div class="products" id="lawn-container"></div>
+
+  </section>
+
+
+  <!-- FANCY -->
+
+  <section class="section" id="fancy">
+
+    <div class="section-title">
+
+      <h2>Fancy Edit</h2>
+
+      <p>
+        Festive looks for special moments
+      </p>
+
+    </div>
+
+    <div class="products" id="fancy-container"></div>
+
+  </section>
+
+
+  <!-- CART -->
+
+  <aside class="cart-panel" id="cart-panel">
+
+    <div class="cart-header">
+
+      <h2>Your Bag</h2>
+
+      <button class="close-cart" onclick="closeCart()">
+        ×
+      </button>
+
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-total">
+
+      <span>Total</span>
+
+      <span>
+        Rs. <span id="cart-total">0</span>
+      </span>
+
+    </div>
+
+    <button class="checkout-btn" onclick="openCheckout()">
+      PROCEED TO CHECKOUT
+    </button>
+
+  </aside>
+
+
+  <!-- CHECKOUT FORM -->
+
+  <div class="checkout-box" id="checkout-box">
+
+    <div class="checkout-form">
+
+      <h2>Place Your Order</h2>
+
+      <p>
+        Enter your details and continue to WhatsApp.
+      </p>
+
+
+      <div class="form-group">
+
+        <label>Full Name *</label>
+
+        <input
+          type="text"
+          id="customer-name"
+          placeholder="Your full name"
+          required>
 
       </div>
 
-    </section>
 
-  </main>
+      <div class="form-group">
+
+        <label>Phone Number *</label>
+
+        <input
+          type="tel"
+          id="customer-phone"
+          placeholder="03XXXXXXXXX"
+          required>
+
+      </div>
 
 
-  <!-- FOOTER -->
+      <div class="form-group">
+
+        <label>City *</label>
+
+        <input
+          type="text"
+          id="customer-city"
+          placeholder="Your city"
+          required>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label>Complete Delivery Address *</label>
+
+        <textarea
+          id="customer-address"
+          placeholder="House / Street / Area / City"
+          required></textarea>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label>Size</label>
+
+        <select id="customer-size">
+
+          <option value="Not specified">
+            Select size
+          </option>
+
+          <option value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="Custom">Custom</option>
+
+        </select>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label>Additional Note</label>
+
+        <textarea
+          id="customer-note"
+          placeholder="Color preference, special request, etc."></textarea>
+
+      </div>
+
+
+      <div class="form-buttons">
+
+        <button
+          class="cancel-btn"
+          onclick="closeCheckout()">
+
+          Cancel
+
+        </button>
+
+        <button
+          class="whatsapp-btn"
+          onclick="sendOrderToWhatsApp()">
+
+          💬 Order on WhatsApp
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <h2>Contact Aneezay's</h2>
+
+    <p>
+      For orders & enquiries
+    </p>
+
+    <p>
+      WhatsApp:
+      <a id="contact-whatsapp" href="#" target="_blank">
+        Message Us
+      </a>
+    </p>
+<p>
+  Email:
+  <a href="mailto:aneezaybrand@gmail.com">
+    aneezaybrand@gmail.com 
+  </a>
+</p>
+  </section>
+
+
   <footer>
 
-    <span>© 2026 Aneezay's</span>
-
-    <span>Made with elegance.</span>
+    © 2026 Aneezay's. All Rights Reserved.
 
   </footer>
 
 
-  <script src="script.js"></script>
+  <script>
 
-</body>
-</html>
+    /*
+      =====================================================
+      IMPORTANT:
+      PUT YOUR WHATSAPP NUMBER BELOW.
+      
+      Pakistan format:
+      03XXXXXXXXX
+
+      becomes:
+      923XXXXXXXXX
+
+      Example:
+      03001234567
+      becomes:
+      923001234567
+      =====================================================
+    */
+
+    const WHATSAPP_NUMBER = "923009482932";
+
+
+    /*
+      =====================================================
+      PRODUCTS
+      =====================================================
+    */
+
+    const products = [
+
+      {
+        id: 1,
+        name: "Noor Lawn Set",
+        price: 4290,
+        category: "Lawn",
+        image: "noor-lawn.jpg"
+      },
+
+      {
+        id: 2,
+        name: "Mehfil Embroidered",
+        price: 8990,
+        category: "Fancy",
+        image: "mehfil.jpg"
+      },
+
+      {
+        id: 3,
+        name: "Rang-e-Bahar",
+        price: 7490,
+        category: "Traditional",
+        image: "rang-e-bahar.jpg"
+      },
+
+      {
+        id: 4,
+        name: "Rosé Co-ord",
+        price: 5190,
+        category: "Casual",
+        image: "rose-coord
            
